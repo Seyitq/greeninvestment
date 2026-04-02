@@ -45,7 +45,7 @@ export default function AdminMesajlarPage() {
       {loading ? (
         <div className="text-gray-500 text-center py-10">Yükleniyor...</div>
       ) : contacts.length === 0 ? (
-        <div className="text-center py-20 bg-dark-100 border border-dark-300 rounded-xl">
+        <div className="text-center py-20 bg-gray-800 border border-gray-700 rounded-xl">
           <HiOutlineMail className="mx-auto text-gray-600 mb-3" size={40} />
           <p className="text-gray-500">Henüz mesaj gelmemiş.</p>
         </div>
@@ -59,8 +59,8 @@ export default function AdminMesajlarPage() {
                 onClick={() => setSelectedId(contact.id)}
                 className={`w-full text-left p-4 rounded-xl border transition-colors ${
                   selectedId === contact.id
-                    ? 'bg-dark-100 border-neon/30'
-                    : 'bg-dark-100 border-dark-300 hover:border-dark-400'
+                    ? 'bg-gray-800 border-neon/30'
+                    : 'bg-gray-800 border-gray-700 hover:border-gray-600'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1">
@@ -84,7 +84,7 @@ export default function AdminMesajlarPage() {
           {/* Detail */}
           <div className="lg:col-span-2">
             {selectedContact ? (
-              <div className="bg-dark-100 border border-dark-300 rounded-xl p-6">
+              <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <h2 className="text-lg font-semibold text-white">
@@ -113,7 +113,7 @@ export default function AdminMesajlarPage() {
                   </div>
                 )}
 
-                <div className="bg-dark-200 rounded-lg p-4 mb-4">
+                <div className="bg-gray-700 rounded-lg p-4 mb-4">
                   <p className="text-gray-300 text-sm whitespace-pre-wrap leading-relaxed">
                     {selectedContact.message}
                   </p>
@@ -141,7 +141,7 @@ export default function AdminMesajlarPage() {
                 </div>
               </div>
             ) : (
-              <div className="bg-dark-100 border border-dark-300 rounded-xl p-12 text-center">
+              <div className="bg-gray-800 border border-gray-700 rounded-xl p-12 text-center">
                 <HiOutlineMail className="mx-auto text-gray-600 mb-3" size={32} />
                 <p className="text-gray-500 text-sm">
                   Bir mesaj seçin

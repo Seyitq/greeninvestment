@@ -67,17 +67,17 @@ export default function AdminProjelerPage() {
       {loading ? (
         <div className="text-gray-500 text-center py-10">Yükleniyor...</div>
       ) : projects.length === 0 ? (
-        <div className="text-center py-20 bg-dark-100 border border-dark-300 rounded-xl">
+        <div className="text-center py-20 bg-gray-800 border border-gray-700 rounded-xl">
           <p className="text-gray-500 mb-4">Henüz proje eklenmemiş.</p>
           <Link href="/admin/projeler/yeni" className="btn-primary text-sm">
             İlk Projeyi Ekle
           </Link>
         </div>
       ) : (
-        <div className="bg-dark-100 border border-dark-300 rounded-xl overflow-hidden">
+        <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-dark-300">
+              <tr className="border-b border-gray-700">
                 <th className="text-left px-4 py-3 text-xs font-medium text-gray-500 uppercase">
                   Proje
                 </th>
@@ -99,7 +99,7 @@ export default function AdminProjelerPage() {
               {projects.map((project) => (
                 <tr
                   key={project.id}
-                  className="border-b border-dark-300/50 hover:bg-dark-200/50 transition-colors"
+                  className="border-b border-gray-700/50 hover:bg-gray-700/50 transition-colors"
                 >
                   <td className="px-4 py-3">
                     <span className="text-white font-medium text-sm">
@@ -119,7 +119,7 @@ export default function AdminProjelerPage() {
                           ? 'bg-neon/10 text-neon'
                           : project.status === 'yakında'
                           ? 'bg-gold/10 text-gold'
-                          : 'bg-dark-400 text-gray-400'
+                          : 'bg-gray-600 text-gray-400'
                       }`}
                     >
                       {project.status}

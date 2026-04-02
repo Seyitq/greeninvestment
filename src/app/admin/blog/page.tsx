@@ -67,17 +67,17 @@ export default function AdminBlogPage() {
       {loading ? (
         <div className="text-gray-500 text-center py-10">Yükleniyor...</div>
       ) : posts.length === 0 ? (
-        <div className="text-center py-20 bg-dark-100 border border-dark-300 rounded-xl">
+        <div className="text-center py-20 bg-gray-800 border border-gray-700 rounded-xl">
           <p className="text-gray-500 mb-4">Henüz blog yazısı eklenmemiş.</p>
           <Link href="/admin/blog/yeni" className="btn-primary text-sm">
             İlk Yazıyı Ekle
           </Link>
         </div>
       ) : (
-        <div className="bg-dark-100 border border-dark-300 rounded-xl overflow-hidden">
+        <div className="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden">
           <table className="w-full">
             <thead>
-              <tr className="border-b border-dark-300">
+              <tr className="border-b border-gray-700">
                 <th className="text-left px-4 py-3 text-xs font-medium text-gray-500 uppercase">
                   Başlık
                 </th>
@@ -99,7 +99,7 @@ export default function AdminBlogPage() {
               {posts.map((post) => (
                 <tr
                   key={post.id}
-                  className="border-b border-dark-300/50 hover:bg-dark-200/50 transition-colors"
+                  className="border-b border-gray-700/50 hover:bg-gray-700/50 transition-colors"
                 >
                   <td className="px-4 py-3">
                     <span className="text-white font-medium text-sm">
@@ -119,7 +119,7 @@ export default function AdminBlogPage() {
                         Yayında
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-dark-400 text-gray-400">
+                      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-gray-600 text-gray-400">
                         <HiOutlineEyeOff size={12} />
                         Taslak
                       </span>

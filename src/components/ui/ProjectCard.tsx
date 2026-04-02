@@ -40,9 +40,12 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <span className="text-gray-400 text-sm">Görsel Yok</span>
-              </div>
+              <Image
+                src="/hero-1.jpg"
+                alt={project.title}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-700"
+              />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
           </div>

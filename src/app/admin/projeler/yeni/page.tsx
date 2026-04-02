@@ -131,7 +131,7 @@ function ProjeForm() {
           required
           value={form.title}
           onChange={(e) => setForm({ ...form, title: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           placeholder="Proje adı"
         />
       </div>
@@ -145,7 +145,7 @@ function ProjeForm() {
           rows={2}
           value={form.description}
           onChange={(e) => setForm({ ...form, description: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
           placeholder="Projenin kısa açıklaması"
         />
       </div>
@@ -159,7 +159,7 @@ function ProjeForm() {
           rows={8}
           value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
           placeholder="Projenin detaylı açıklaması"
         />
       </div>
@@ -172,7 +172,7 @@ function ProjeForm() {
             type="text"
             value={form.location}
             onChange={(e) => setForm({ ...form, location: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
             placeholder="İstanbul, Beşiktaş"
           />
         </div>
@@ -181,7 +181,7 @@ function ProjeForm() {
           <select
             value={form.status}
             onChange={(e) => setForm({ ...form, status: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           >
             <option value="aktif">Satışta</option>
             <option value="yakında">Yakında</option>
@@ -198,7 +198,7 @@ function ProjeForm() {
             type="text"
             value={form.price}
             onChange={(e) => setForm({ ...form, price: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
             placeholder="₺1,500,000'den"
           />
         </div>
@@ -208,7 +208,7 @@ function ProjeForm() {
             type="text"
             value={form.area}
             onChange={(e) => setForm({ ...form, area: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
             placeholder="120 m²"
           />
         </div>
@@ -218,7 +218,7 @@ function ProjeForm() {
             type="text"
             value={form.rooms}
             onChange={(e) => setForm({ ...form, rooms: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
             placeholder="2+1, 3+1, 4+1"
           />
         </div>
@@ -230,7 +230,7 @@ function ProjeForm() {
           Kapak Görseli
         </label>
         <div className="flex items-center gap-4">
-          <label className="flex items-center gap-2 bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-gray-400 hover:text-neon hover:border-neon/30 transition-colors cursor-pointer">
+          <label className="flex items-center gap-2 bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-gray-400 hover:text-neon hover:border-neon/30 transition-colors cursor-pointer">
             <HiOutlineUpload size={18} />
             <span className="text-sm">
               {uploading ? 'Yükleniyor...' : 'Görsel Seç'}
@@ -260,7 +260,7 @@ function ProjeForm() {
           type="text"
           value={form.features}
           onChange={(e) => setForm({ ...form, features: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           placeholder="Havuz, Spor Salonu, Otopark, Güvenlik"
         />
       </div>
@@ -274,7 +274,7 @@ function ProjeForm() {
           type="text"
           value={form.map_url}
           onChange={(e) => setForm({ ...form, map_url: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           placeholder="https://www.google.com/maps/embed?..."
         />
       </div>

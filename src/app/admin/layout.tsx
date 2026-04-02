@@ -37,11 +37,11 @@ export default function AdminLayout({
   }
 
   return (
-    <div className="min-h-screen bg-dark flex">
+    <div className="min-h-screen bg-gray-900 flex">
       {/* Sidebar */}
-      <aside className="w-64 bg-dark-50 border-r border-dark-300 flex flex-col shrink-0">
+      <aside className="w-64 bg-gray-800 border-r border-gray-700 flex flex-col shrink-0">
         {/* Logo */}
-        <div className="p-5 border-b border-dark-300">
+        <div className="p-5 border-b border-gray-700">
           <Link href="/admin" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-neon/10 border border-neon/30 flex items-center justify-center">
               <span className="text-neon font-bold text-sm">G</span>
@@ -66,7 +66,7 @@ export default function AdminLayout({
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
                   isActive
                     ? 'bg-neon/10 text-neon border border-neon/20'
-                    : 'text-gray-400 hover:text-white hover:bg-dark-200'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-700'
                 }`}
               >
                 <link.icon size={18} />
@@ -77,11 +77,11 @@ export default function AdminLayout({
         </nav>
 
         {/* Bottom */}
-        <div className="p-3 border-t border-dark-300 space-y-1">
+        <div className="p-3 border-t border-gray-700 space-y-1">
           <Link
             href="/"
             target="_blank"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-dark-200 transition-colors"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
           >
             <HiOutlineExternalLink size={18} />
             Siteyi Gör

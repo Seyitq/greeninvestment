@@ -37,7 +37,7 @@ export default function AdminGirisPage() {
   }
 
   return (
-    <div className="min-h-screen bg-dark flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-8">
@@ -55,7 +55,7 @@ export default function AdminGirisPage() {
         {/* Form */}
         <form
           onSubmit={handleSubmit}
-          className="bg-dark-100 border border-dark-300 rounded-2xl p-6"
+          className="bg-gray-800 border border-gray-700 rounded-2xl p-6"
         >
           <div className="mb-4">
             <label
@@ -70,7 +70,7 @@ export default function AdminGirisPage() {
               required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-neon/50 focus:outline-none transition-colors"
+              className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-neon/50 focus:outline-none transition-colors"
               placeholder="admin"
             />
           </div>
@@ -88,7 +88,7 @@ export default function AdminGirisPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-neon/50 focus:outline-none transition-colors"
+              className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:border-neon/50 focus:outline-none transition-colors"
               placeholder="••••••••"
             />
           </div>

@@ -77,7 +77,7 @@ export default function AdminDashboard() {
         {cards.map((card) => (
           <div
             key={card.label}
-            className="bg-dark-100 border border-dark-300 rounded-xl p-5"
+            className="bg-gray-800 border border-gray-700 rounded-xl p-5"
           >
             <div className="flex items-center justify-between mb-3">
               <card.icon
@@ -91,7 +91,7 @@ export default function AdminDashboard() {
         ))}
       </div>
 
-      <div className="bg-dark-100 border border-dark-300 rounded-xl p-6">
+      <div className="bg-gray-800 border border-gray-700 rounded-xl p-6">
         <h2 className="text-lg font-semibold text-white mb-3">Hoş Geldiniz</h2>
         <p className="text-gray-500 text-sm leading-relaxed">
           Green Yatırım yönetim paneline hoş geldiniz. Sol menüden projeleri,

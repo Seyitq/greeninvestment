@@ -106,7 +106,7 @@ function BlogForm() {
           required
           value={form.title}
           onChange={(e) => setForm({ ...form, title: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           placeholder="Yazı başlığı"
         />
       </div>
@@ -118,7 +118,7 @@ function BlogForm() {
           rows={2}
           value={form.excerpt}
           onChange={(e) => setForm({ ...form, excerpt: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
           placeholder="Yazının kısa özeti"
         />
       </div>
@@ -130,7 +130,7 @@ function BlogForm() {
           rows={12}
           value={form.content}
           onChange={(e) => setForm({ ...form, content: e.target.value })}
-          className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
+          className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors resize-none"
           placeholder="Yazı içeriği..."
         />
       </div>
@@ -145,7 +145,7 @@ function BlogForm() {
             type="text"
             value={form.category}
             onChange={(e) => setForm({ ...form, category: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
             placeholder="Yatırım, Piyasa, vb."
           />
         </div>
@@ -155,7 +155,7 @@ function BlogForm() {
             type="text"
             value={form.author}
             onChange={(e) => setForm({ ...form, author: e.target.value })}
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           />
         </div>
         <div>
@@ -165,7 +165,7 @@ function BlogForm() {
             onChange={(e) =>
               setForm({ ...form, is_published: Number(e.target.value) })
             }
-            className="w-full bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
+            className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-neon/50 focus:outline-none transition-colors"
           >
             <option value={1}>Yayında</option>
             <option value={0}>Taslak</option>
@@ -179,7 +179,7 @@ function BlogForm() {
           Kapak Görseli
         </label>
         <div className="flex items-center gap-4">
-          <label className="flex items-center gap-2 bg-dark-200 border border-dark-400 rounded-lg px-4 py-3 text-gray-400 hover:text-neon hover:border-neon/30 transition-colors cursor-pointer">
+          <label className="flex items-center gap-2 bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-gray-400 hover:text-neon hover:border-neon/30 transition-colors cursor-pointer">
             <HiOutlineUpload size={18} />
             <span className="text-sm">
               {uploading ? 'Yükleniyor...' : 'Görsel Seç'}
