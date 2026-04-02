@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     const bytes = await file.arrayBuffer()
     const buffer = Buffer.from(bytes)
 
-    const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
+    const uploadsDir = path.join(process.cwd(), 'data', 'uploads')
     if (!fs.existsSync(uploadsDir)) {
       fs.mkdirSync(uploadsDir, { recursive: true })
     }
@@ -35,7 +35,6 @@ export async function POST(request: Request) {
 
     fs.writeFileSync(filepath, buffer)
 
-    // Dosyanın gerçekten yazıldığını doğrula
     if (!fs.existsSync(filepath)) {
       return NextResponse.json(
         { error: 'Dosya diske kaydedilemedi' },
@@ -43,7 +42,7 @@ export async function POST(request: Request) {
       )
     }
 
-    return NextResponse.json({ url: `/uploads/${filename}` })
+    return NextResponse.json({ url: `/api/uploads/${filename}` })
   } catch {
     return NextResponse.json(
       { error: 'Dosya yüklenemedi' },
