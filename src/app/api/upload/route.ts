@@ -35,6 +35,14 @@ export async function POST(request: Request) {
 
     fs.writeFileSync(filepath, buffer)
 
+    // Dosyanın gerçekten yazıldığını doğrula
+    if (!fs.existsSync(filepath)) {
+      return NextResponse.json(
+        { error: 'Dosya diske kaydedilemedi' },
+        { status: 500 }
+      )
+    }
+
     return NextResponse.json({ url: `/uploads/${filename}` })
   } catch {
     return NextResponse.json(
