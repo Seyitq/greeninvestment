@@ -20,14 +20,6 @@ export async function POST(request: Request) {
       )
     }
 
-    // Validate file size (max 5MB)
-    if (file.size > 5 * 1024 * 1024) {
-      return NextResponse.json(
-        { error: 'Dosya boyutu 5MB\'dan büyük olamaz' },
-        { status: 400 }
-      )
-    }
-
     const bytes = await file.arrayBuffer()
     const buffer = Buffer.from(bytes)
 
