@@ -3,6 +3,8 @@ import getDb from '@/lib/db'
 import ProjectCard from '@/components/ui/ProjectCard'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Projeler',
   description: 'Green Yatırım lüks gayrimenkul projeleri. Sürdürülebilir, modern ve değer kazanan emlak projelerimizi keşfedin.',

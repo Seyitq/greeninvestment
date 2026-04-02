@@ -12,6 +12,8 @@ import {
   HiOutlineArrowLeft,
 } from 'react-icons/hi'
 
+export const dynamic = 'force-dynamic'
+
 interface Props {
   params: { slug: string }
 }

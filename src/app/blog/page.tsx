@@ -3,6 +3,8 @@ import getDb from '@/lib/db'
 import BlogCard from '@/components/ui/BlogCard'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Blog',
   description: 'Green Yatırım blog yazıları. Gayrimenkul yatırımı, piyasa analizleri ve sektör haberleri.',

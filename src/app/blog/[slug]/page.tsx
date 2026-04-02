@@ -6,6 +6,8 @@ import getDb from '@/lib/db'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import { HiOutlineCalendar, HiOutlineUser, HiOutlineArrowLeft, HiOutlineTag } from 'react-icons/hi'
 
+export const dynamic = 'force-dynamic'
+
 interface Props {
   params: { slug: string }
 }

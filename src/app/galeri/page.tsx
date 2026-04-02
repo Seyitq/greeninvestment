@@ -3,6 +3,8 @@ import getDb from '@/lib/db'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import GaleriClient from '@/components/ui/GalleryClient'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'Galeri',
   description: 'Green Yatırım proje görselleri ve galeri. Lüks gayrimenkul projelerimizin fotoğraflarını inceleyin.',
