@@ -9,12 +9,14 @@ import {
   HiOutlineMail,
   HiOutlineLogout,
   HiOutlineExternalLink,
+  HiOutlinePhotograph,
 } from 'react-icons/hi'
 
 const sidebarLinks = [
   { href: '/admin', label: 'Panel', icon: HiOutlineHome },
   { href: '/admin/projeler', label: 'Projeler', icon: HiOutlineOfficeBuilding },
   { href: '/admin/blog', label: 'Blog', icon: HiOutlineNewspaper },
+  { href: '/admin/galeri', label: 'Galeri', icon: HiOutlinePhotograph },
   { href: '/admin/mesajlar', label: 'Mesajlar', icon: HiOutlineMail },
 ]
 
