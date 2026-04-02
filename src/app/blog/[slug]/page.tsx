@@ -75,7 +75,7 @@ export default function BlogDetailPage({ params }: Props) {
                   <span className="text-neon text-sm">{post.category}</span>
                 </div>
               )}
-              <h1 className="text-3xl md:text-5xl font-heading font-bold text-white mb-5 leading-tight">
+              <h1 className="text-3xl md:text-5xl font-heading font-bold text-gray-900 mb-5 leading-tight">
                 {post.title}
               </h1>
               <div className="flex items-center gap-4 text-gray-500 text-sm">
@@ -108,8 +108,8 @@ export default function BlogDetailPage({ params }: Props) {
 
           {/* Content */}
           <AnimatedSection>
-            <div className="prose prose-invert max-w-none">
-              <div className="text-gray-400 leading-relaxed text-lg whitespace-pre-wrap">
+            <div className="prose max-w-none">
+              <div className="text-gray-700 leading-relaxed text-lg whitespace-pre-wrap">
                 {post.content}
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function BlogDetailPage({ params }: Props) {
           {/* Related Posts */}
           {relatedPosts.length > 0 && (
             <AnimatedSection className="mt-16">
-              <h2 className="text-2xl font-heading font-bold text-white mb-6">
+              <h2 className="text-2xl font-heading font-bold text-gray-900 mb-6">
                 Diğer Yazılar
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -150,7 +150,7 @@ export default function BlogDetailPage({ params }: Props) {
                     href={`/blog/${rp.slug}`}
                     className="card-dark p-4 group"
                   >
-                    <h3 className="text-sm font-semibold text-white group-hover:text-neon transition-colors line-clamp-2 mb-2">
+                    <h3 className="text-sm font-semibold text-gray-800 group-hover:text-neon transition-colors line-clamp-2 mb-2">
                       {rp.title}
                     </h3>
                     <p className="text-gray-600 text-xs line-clamp-2">
