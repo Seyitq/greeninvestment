@@ -319,12 +319,39 @@ cp -r /var/www/greeninvestment/public/uploads /backup/uploads-$(date +%Y%m%d)
 
 ### Güncelleme (Kod Değişikliği Sonrası)
 
+#### Git ile güncelleme (önerilen)
+
+**1. Localda değişiklikleri GitHub'a gönder:**
+```bash
+# Proje klasöründe (localda)
+git add .
+git commit -m "güncelleme açıklaması"
+git push origin main
+```
+
+**2. Sunucuda çek ve yeniden başlat:**
 ```bash
 cd /var/www/greeninvestment
-git pull                 # veya yeni dosyaları SCP ile gönder
-npm install              # yeni paket varsa
+git pull origin main
+npm install          # yeni paket eklendiyse gerekli, yoksa atlayabilirsin
 npm run build
 pm2 restart greeninvestment
+```
+
+> `.env.local` dosyası `.gitignore`'da olduğu için Git ile **gönderilmez** — sunucudaki `.env.local` korunur, üzerine yazılmaz. Veritabanı ve yüklenen görseller de aynı şekilde dokunulmaz kalır.
+
+---
+
+**İlk kez Git ile kuracaksan** (sunucuda proje yoksa):
+```bash
+# Sunucuda
+git clone https://github.com/KULLANICI/greeninvestment.git /var/www/greeninvestment
+cd /var/www/greeninvestment
+nano .env.local        # env değişkenlerini gir
+npm install
+npm run build
+pm2 start npm --name "greeninvestment" -- start
+pm2 save
 ```
 
 ### Logları Görüntüle
