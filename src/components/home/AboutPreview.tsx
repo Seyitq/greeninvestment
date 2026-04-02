@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import { HiOutlineArrowRight, HiOutlineCheckCircle } from 'react-icons/hi'
 
@@ -11,15 +12,14 @@ export default function AboutPreview() {
           {/* Left - Image Area */}
           <AnimatedSection direction="left">
             <div className="relative">
-              <div className="aspect-[4/3] bg-dark-200 rounded-2xl border border-dark-300 overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-dark-100 via-dark-200 to-dark-300 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 rounded-full bg-neon/10 border border-neon/20 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-neon text-3xl font-heading font-bold">G</span>
-                    </div>
-                    <p className="text-gray-600 text-sm">Green Yatırım</p>
-                  </div>
-                </div>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                <Image
+                  src="/hero-1.jpg"
+                  alt="Green Yatırım"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Floating Card */}
               <div className="absolute -bottom-6 -right-4 md:right-6 bg-dark-100 border border-dark-300 rounded-xl p-4 shadow-xl">
@@ -49,7 +49,7 @@ export default function AboutPreview() {
                 'Profesyonel yatırım danışmanlığı',
                 'Çevre dostu ve sürdürülebilir projeler',
                 'Şeffaf ve güvenilir iş süreçleri',
-                '3000+ mutlu müşteri',
+                '1500+ mutlu müşteri',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-gray-700 text-sm">
                   <HiOutlineCheckCircle className="text-neon shrink-0" size={20} />

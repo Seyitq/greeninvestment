@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import AnimatedSection from '@/components/ui/AnimatedSection'
 import { HiOutlineCheckCircle, HiOutlineLightBulb, HiOutlineHeart, HiOutlineGlobe } from 'react-icons/hi'
 
@@ -74,16 +75,14 @@ export default function HakkimizdaPage() {
 
             <AnimatedSection direction="right">
               <div className="relative">
-                <div className="aspect-square bg-gray-100 rounded-2xl border border-gray-200 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-neon/5 via-gray-50 to-gold/5 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 rounded-full bg-neon/10 border-2 border-neon/20 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-neon text-4xl font-heading font-bold">G</span>
-                      </div>
-                      <p className="text-gray-800 text-2xl font-heading font-bold">Green Yatırım</p>
-                      <p className="text-gray-500 text-sm mt-1">Est. 2011</p>
-                    </div>
-                  </div>
+                <div className="aspect-square rounded-2xl overflow-hidden">
+                  <Image
+                    src="/hero-2.png"
+                    alt="Green Yatırım"
+                    width={800}
+                    height={800}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 {/* Stats cards */}
                 <div className="absolute -bottom-4 -left-4 bg-white border border-gray-200 rounded-xl p-4 shadow-xl">
@@ -91,7 +90,7 @@ export default function HakkimizdaPage() {
                   <div className="text-gray-500 text-xs">Proje</div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-white border border-gray-200 rounded-xl p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-gold text-glow-gold">3000+</div>
+                  <div className="text-2xl font-bold text-gold text-glow-gold">1500+</div>
                   <div className="text-gray-500 text-xs">Müşteri</div>
                 </div>
               </div>
