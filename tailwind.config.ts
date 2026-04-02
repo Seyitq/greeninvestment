@@ -16,9 +16,9 @@ const config: Config = {
           glow: 'rgba(0, 92, 53, 0.15)',
         },
         gold: {
-          DEFAULT: '#d4af37',
-          bright: '#ffd700',
-          dim: '#b8960c',
+          DEFAULT: '#005c35',
+          bright: '#007a47',
+          dim: '#004d2c',
         },
         dark: {
           DEFAULT: '#ffffff',
@@ -37,7 +37,7 @@ const config: Config = {
       boxShadow: {
         neon: '0 0 20px rgba(0, 92, 53, 0.3)',
         'neon-lg': '0 0 40px rgba(0, 92, 53, 0.4)',
-        gold: '0 0 20px rgba(212, 175, 55, 0.3)',
+        gold: '0 0 20px rgba(0, 92, 53, 0.3)',
       },
     },
   },

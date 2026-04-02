@@ -45,25 +45,6 @@ export default function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               </div>
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-
-            {/* Status Badge */}
-            <div className="absolute top-4 left-4">
-              <span
-                className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  project.status === 'aktif'
-                    ? 'bg-neon/20 text-neon border border-neon/30'
-                    : project.status === 'yakında'
-                    ? 'bg-gold/20 text-gold border border-gold/30'
-                    : 'bg-gray-100 text-gray-600 border border-gray-200'
-                }`}
-              >
-                {project.status === 'aktif'
-                  ? 'Satışta'
-                  : project.status === 'yakında'
-                  ? 'Yakında'
-                  : 'Tamamlandı'}
-              </span>
-            </div>
           </div>
 
           {/* Content */}

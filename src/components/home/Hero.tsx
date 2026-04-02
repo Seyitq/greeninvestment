@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { HiOutlineArrowDown, HiChevronLeft, HiChevronRight } from 'react-icons/hi'
+import { HiOutlineArrowDown } from 'react-icons/hi'
 
 const slides = [
   {
@@ -26,7 +26,6 @@ const slides = [
 
 export default function Hero() {
   const [current, setCurrent] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -34,16 +33,6 @@ export default function Hero() {
     }, 5000)
     return () => clearInterval(timer)
   }, [])
-
-  const goTo = (index: number) => {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setCurrent(index)
-    setTimeout(() => setIsAnimating(false), 700)
-  }
-
-  const prev = () => goTo((current - 1 + slides.length) % slides.length)
-  const next = () => goTo((current + 1) % slides.length)
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -76,38 +65,8 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
       </div>
 
-      {/* ── SLIDE LABEL ── */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`label-${current}`}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 20 }}
-          transition={{ duration: 0.5 }}
-          className="absolute top-8 right-8 z-20 hidden md:block"
-        >
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20">
-            <div className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-            <span className="text-white text-xs font-medium tracking-wider">
-              {slides[current].label}
-            </span>
-          </div>
-        </motion.div>
-      </AnimatePresence>
-
       {/* ── MAIN CONTENT ── */}
       <div className="relative z-10 container-custom px-4 md:px-8 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          <span className="text-white text-sm font-medium">Yeni Projeler Satışta</span>
-        </motion.div>
-
         {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -116,10 +75,10 @@ export default function Hero() {
           className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight mb-6"
         >
           <span className="text-white drop-shadow-lg">Geleceğe </span>
-          <span className="text-gold" style={{ textShadow: '0 0 30px rgba(212,175,55,0.5)' }}>Değer</span>
+          <span className="text-neon" style={{ textShadow: '0 0 30px rgba(0,92,53,0.6)' }}>Değer</span>
           <br />
           <span className="text-white drop-shadow-lg">Katan </span>
-          <span className="text-white/90 underline decoration-gold decoration-2 underline-offset-4">Yatırımlar</span>
+          <span className="text-white/90 underline decoration-neon decoration-2 underline-offset-4">Yatırımlar</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -142,7 +101,7 @@ export default function Hero() {
         >
           <Link
             href="/projeler"
-            className="inline-flex items-center justify-center gap-2 bg-gold text-white font-semibold px-8 py-4 rounded-lg hover:bg-gold-bright transition-all duration-300 hover:shadow-gold active:scale-95 text-base"
+            className="inline-flex items-center justify-center gap-2 bg-neon text-white font-semibold px-8 py-4 rounded-lg hover:bg-neon-dim transition-all duration-300 hover:shadow-neon active:scale-95 text-base"
           >
             Projeleri Keşfet
           </Link>
@@ -164,52 +123,32 @@ export default function Hero() {
           {[
             { value: '150+', label: 'Tamamlanan Proje' },
             { value: '₺2.5B+', label: 'Toplam Yatırım' },
-            { value: '3000+', label: 'Mutlu Müşteri' },
+            { value: '1500+', label: 'Mutlu Müşteri' },
             { value: '15+', label: 'Yıllık Deneyim' },
           ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div
-                className="text-2xl md:text-3xl font-bold text-gold mb-1"
-                style={{ textShadow: '0 0 20px rgba(212,175,55,0.4)' }}
-              >
+            <div
+              key={i}
+              className="text-center bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3"
+            >
+              <div className="text-2xl md:text-3xl font-bold text-green-400 mb-1">
                 {stat.value}
               </div>
-              <div className="text-white/70 text-xs md:text-sm">{stat.label}</div>
+              <div className="text-white/80 text-xs md:text-sm">{stat.label}</div>
             </div>
           ))}
         </motion.div>
       </div>
 
-      {/* ── SLIDER CONTROLS ── */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
-        <button
-          onClick={prev}
-          className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
-          aria-label="Önceki slayt"
-        >
-          <HiChevronLeft size={20} />
-        </button>
-
-        <div className="flex gap-2">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i)}
-              className={`transition-all duration-300 rounded-full ${
-                i === current ? 'w-8 h-2 bg-gold' : 'w-2 h-2 bg-white/40 hover:bg-white/70'
-              }`}
-              aria-label={`Slayt ${i + 1}`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={next}
-          className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/20 transition-all"
-          aria-label="Sonraki slayt"
-        >
-          <HiChevronRight size={20} />
-        </button>
+      {/* ── SLIDE DOTS ── */}
+      <div className="absolute bottom-16 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            className={`transition-all duration-300 rounded-full ${
+              i === current ? 'w-8 h-2 bg-gold' : 'w-2 h-2 bg-white/40'
+            }`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}

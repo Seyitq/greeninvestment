@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaInstagram, FaWhatsapp, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6'
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi'
 
@@ -18,18 +19,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & About */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-neon/10 border border-neon/30 flex items-center justify-center">
-                <span className="text-neon font-bold">G</span>
-              </div>
-              <div>
-                <span className="text-gray-800 font-heading font-bold text-lg">
-                  GREEN
-                </span>
-                <span className="text-neon font-heading font-bold text-lg ml-1">
-                  YATIRIM
-                </span>
-              </div>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/greenlogo.png"
+                alt="Green Investment Logo"
+                width={180}
+                height={68}
+                className="h-14 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
               Sürdürülebilir ve lüks gayrimenkul projelerinde güvenilir yatırım

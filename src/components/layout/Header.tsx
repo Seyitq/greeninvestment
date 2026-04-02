@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi'
+import Image from 'next/image'
 
 const navLinks = [
   { href: '/', label: 'Ana Sayfa' },
@@ -48,18 +49,15 @@ export default function Header() {
     >
       <div className="container-custom flex items-center justify-between px-4 md:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-neon/10 border border-neon/30 flex items-center justify-center group-hover:shadow-neon transition-all duration-300">
-            <span className="text-neon font-bold text-lg">G</span>
-          </div>
-          <div>
-            <span className={`font-heading font-bold text-xl tracking-wide ${isTransparent ? 'text-white' : 'text-gray-800'}`}>
-              GREEN
-            </span>
-            <span className="text-neon font-heading font-bold text-xl ml-1">
-              YATIRIM
-            </span>
-          </div>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/greenlogo.png"
+            alt="Green Investment Logo"
+            width={200}
+            height={50}
+            className="h-16 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

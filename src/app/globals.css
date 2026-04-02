@@ -36,7 +36,7 @@
   }
 
   .text-glow-gold {
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5), 0 0 40px rgba(212, 175, 55, 0.2);
+    text-shadow: 0 0 20px rgba(0, 92, 53, 0.5), 0 0 40px rgba(0, 92, 53, 0.2);
   }
 
   .border-glow {
@@ -67,9 +67,9 @@
   }
 
   .btn-gold {
-    @apply bg-gold text-dark font-semibold px-6 py-3 rounded-lg 
-           hover:bg-gold-bright transition-all duration-300 
-           hover:shadow-gold active:scale-95;
+    @apply bg-neon text-white font-semibold px-6 py-3 rounded-lg 
+           hover:bg-neon-dim transition-all duration-300 
+           hover:shadow-neon active:scale-95;
   }
 
   .card-dark {
