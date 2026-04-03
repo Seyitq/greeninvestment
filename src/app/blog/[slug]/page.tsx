@@ -94,7 +94,7 @@ export default function BlogDetailPage({ params }: Props) {
           {/* Featured Image */}
           {post.image_url && (
             <AnimatedSection>
-              <div className="relative aspect-video rounded-2xl overflow-hidden border border-dark-300 mb-10">
+              <div className="relative aspect-video rounded-2xl overflow-hidden border border-gray-200 mb-10">
                 <Image
                   src={post.image_url}
                   alt={post.title}
@@ -116,7 +116,7 @@ export default function BlogDetailPage({ params }: Props) {
           </AnimatedSection>
 
           {/* Share & Tags */}
-          <AnimatedSection className="mt-12 pt-8 border-t border-dark-300">
+          <AnimatedSection className="mt-12 pt-8 border-t border-gray-200">
             <div className="flex items-center justify-between">
               <Link
                 href="/blog"

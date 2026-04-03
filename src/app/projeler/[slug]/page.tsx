@@ -125,7 +125,7 @@ export default function ProjectDetailPage({ params }: Props) {
                     {project.location}
                   </div>
                 )}
-                <div className="prose prose-invert max-w-none">
+                <div className="prose max-w-none">
                   <div className="text-gray-600 leading-relaxed whitespace-pre-wrap">
                     {project.content || project.description}
                   </div>

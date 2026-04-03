@@ -22,7 +22,7 @@ export default function AboutPreview() {
                 />
               </div>
               {/* Floating Card */}
-              <div className="absolute -bottom-6 -right-4 md:right-6 bg-dark-100 border border-dark-300 rounded-xl p-4 shadow-xl">
+              <div className="absolute -bottom-6 right-2 md:right-6 bg-dark-100 border border-dark-300 rounded-xl p-4 shadow-xl">
                 <div className="text-2xl font-bold text-neon text-glow">15+</div>
                 <div className="text-gray-500 text-xs">Yıllık Deneyim</div>
               </div>

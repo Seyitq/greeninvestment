@@ -55,7 +55,7 @@ export default function Header() {
             alt="Green Investment Logo"
             width={200}
             height={50}
-            className="h-16 w-auto object-contain"
+            className="h-10 sm:h-14 lg:h-16 w-auto object-contain"
             priority
           />
         </Link>

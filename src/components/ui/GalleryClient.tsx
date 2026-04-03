@@ -40,7 +40,7 @@ export default function GaleriClient({ images }: { images: GalleryImage[] }) {
     <>
       {/* Filter */}
       {categories.length > 1 && (
-        <AnimatedSection className="flex flex-wrap justify-center gap-2 mb-10">
+        <AnimatedSection className="flex flex-wrap justify-center gap-2 mb-10 px-2">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -48,7 +48,7 @@ export default function GaleriClient({ images }: { images: GalleryImage[] }) {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 filter === cat
                   ? 'bg-neon text-dark'
-                  : 'bg-dark-200 text-gray-400 border border-dark-400 hover:border-neon/30 hover:text-white'
+                'bg-gray-100 text-gray-500 border border-gray-300 hover:border-neon/30 hover:text-gray-800'
               }`}
             >
               {cat}
@@ -66,7 +66,7 @@ export default function GaleriClient({ images }: { images: GalleryImage[] }) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="relative aspect-square rounded-xl overflow-hidden border border-dark-300 cursor-pointer group"
+            className="relative aspect-square rounded-xl overflow-hidden border border-gray-200 cursor-pointer group"
             onClick={() => setSelectedImage(img.id)}
           >
             <Image
@@ -75,7 +75,7 @@ export default function GaleriClient({ images }: { images: GalleryImage[] }) {
               fill
               className="object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/40 transition-colors duration-300 flex items-end">
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-end">
               <div className="p-3 opacity-0 group-hover:opacity-100 transition-opacity">
                 {img.title && (
                   <p className="text-white text-sm font-medium">{img.title}</p>

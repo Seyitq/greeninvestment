@@ -60,7 +60,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="w-9 h-9 rounded-lg bg-dark-200 border border-dark-400 flex items-center justify-center text-gray-400 hover:text-neon hover:border-neon/30 transition-all"
+                className="w-9 h-9 rounded-lg bg-gray-100 border border-gray-300 flex items-center justify-center text-gray-500 hover:text-neon hover:border-neon/30 transition-all"
                 aria-label="X"
               >
                 <FaXTwitter size={18} />
