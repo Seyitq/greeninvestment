@@ -48,7 +48,7 @@ export default function GaleriClient({ images }: { images: GalleryImage[] }) {
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                 filter === cat
                   ? 'bg-neon text-dark'
-                'bg-gray-100 text-gray-500 border border-gray-300 hover:border-neon/30 hover:text-gray-800'
+                  : 'bg-gray-100 text-gray-500 border border-gray-300 hover:border-neon/30 hover:text-gray-800'
               }`}
             >
               {cat}
