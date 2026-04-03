@@ -177,9 +177,9 @@ export default function IletisimPage() {
                     <div>
                       <h3 className="text-gray-800 font-semibold text-sm mb-1">Adres</h3>
                       <p className="text-gray-500 text-sm">
-                        Levent, Büyükdere Cad. No:123
+                        Kanuni Sultan Süleyman Bulvarı 5/E
                         <br />
-                        Beşiktaş, İstanbul
+                        Ametist Life Beytepe, Ankara 06800
                       </p>
                     </div>
                   </div>
