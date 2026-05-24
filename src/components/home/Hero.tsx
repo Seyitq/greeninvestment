@@ -121,9 +121,9 @@ export default function Hero() {
           className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-3xl mx-auto"
         >
           {[
-            { value: '150+', label: 'Tamamlanan Proje' },
-            { value: '₺2.5B+', label: 'Toplam Yatırım' },
-            { value: '1500+', label: 'Mutlu Müşteri' },
+            { value: '12+', label: 'Tamamlanan Proje' },
+            { value: '₺1.5MR+', label: 'Toplam Yatırım' },
+            { value: '2320+', label: 'Mutlu Müşteri' },
             { value: '15+', label: 'Yıllık Deneyim' },
           ].map((stat, i) => (
             <div
