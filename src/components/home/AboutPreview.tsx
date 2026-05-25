@@ -49,7 +49,7 @@ export default function AboutPreview() {
                 'Profesyonel yatırım danışmanlığı',
                 'Çevre dostu ve sürdürülebilir projeler',
                 'Şeffaf ve güvenilir iş süreçleri',
-                '1500+ mutlu müşteri',
+                '2320+ mutlu müşteri',
               ].map((item) => (
                 <li key={item} className="flex items-center gap-3 text-gray-700 text-sm">
                   <HiOutlineCheckCircle className="text-neon shrink-0" size={20} />

@@ -34,9 +34,9 @@ const values = [
 const milestones = [
   { year: '2011', text: 'Green Yatırım kuruldu' },
   { year: '2014', text: 'İlk büyük konut projesi tamamlandı' },
-  { year: '2017', text: '50\'nci proje teslimi' },
+  { year: '2017', text: '9\'uncu proje teslimi' },
   { year: '2020', text: 'Sürdürülebilir bina sertifikası alındı' },
-  { year: '2023', text: '100\'üncü proje ve 2000. mutlu müşteri' },
+  { year: '2023', text: '11\'inci proje ve 2000. mutlu müşteri' },
   { year: '2026', text: 'Uluslararası genişleme başladı' },
 ]
 
@@ -86,11 +86,11 @@ export default function HakkimizdaPage() {
                 </div>
                 {/* Stats cards */}
                 <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white border border-gray-200 rounded-xl p-3 md:p-4 shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold text-neon text-glow">150+</div>
+                  <div className="text-xl md:text-2xl font-bold text-neon text-glow">120+</div>
                   <div className="text-gray-500 text-xs">Proje</div>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white border border-gray-200 rounded-xl p-3 md:p-4 shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold text-gold text-glow-gold">1500+</div>
+                  <div className="text-xl md:text-2xl font-bold text-gold text-glow-gold">2320+</div>
                   <div className="text-gray-500 text-xs">Müşteri</div>
                 </div>
               </div>
