@@ -86,7 +86,7 @@ export default function HakkimizdaPage() {
                 </div>
                 {/* Stats cards */}
                 <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white border border-gray-200 rounded-xl p-3 md:p-4 shadow-xl">
-                  <div className="text-xl md:text-2xl font-bold text-neon text-glow">120+</div>
+                  <div className="text-xl md:text-2xl font-bold text-neon text-glow">12+</div>
                   <div className="text-gray-500 text-xs">Proje</div>
                 </div>
                 <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white border border-gray-200 rounded-xl p-3 md:p-4 shadow-xl">
