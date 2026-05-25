@@ -124,10 +124,19 @@ export default function Footer() {
               <li className="flex items-center gap-3">
                 <HiOutlinePhone className="text-neon shrink-0" size={18} />
                 <a
-                  href="tel:+905551234567"
+                  href="tel:+905015772725"
                   className="text-gray-500 hover:text-neon transition-colors text-sm"
                 >
-                  +90 555 123 45 67
+                  +90 501 577 27 25
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <HiOutlinePhone className="text-neon shrink-0" size={18} />
+                <a
+                  href="tel:+903125772725"
+                  className="text-gray-500 hover:text-neon transition-colors text-sm"
+                >
+                  +90 312 577 27 25
                 </a>
               </li>
               <li className="flex items-center gap-3">

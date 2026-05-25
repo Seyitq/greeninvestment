@@ -193,10 +193,27 @@ export default function IletisimPage() {
                     <div>
                       <h3 className="text-gray-800 font-semibold text-sm mb-1">Telefon</h3>
                       <a
-                        href="tel:+905551234567"
+                        href="tel:+905015772725"
                         className="text-gray-500 hover:text-neon transition-colors text-sm"
                       >
-                        +90 555 123 45 67
+                        +90 501 577 27 25
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="card-dark p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg bg-neon/10 text-neon border border-neon/20 flex items-center justify-center shrink-0">
+                      <HiOutlinePhone size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-gray-800 font-semibold text-sm mb-1">Telefon</h3>
+                      <a
+                        href="tel:+903125772725"
+                        className="text-gray-500 hover:text-neon transition-colors text-sm"
+                      >
+                        +90 312 577 27 25
                       </a>
                     </div>
                   </div>
